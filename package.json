@@ -1,0 +1,26 @@
+{
+  "name": "celu",
+  "version": "0.0.1",
+  "description": "testing gulp build tool",
+  "main": "gulpfile.js",
+  "dependencies": {
+    "gulp": "^3.9.1"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "build"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/goexrois/celu.git"
+  },
+  "keywords": [
+    "gulp"
+  ],
+  "author": "goexrois",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/goexrois/celu/issues"
+  },
+  "homepage": "https://github.com/goexrois/celu#readme"
+}
