@@ -4,7 +4,10 @@
   "description": "testing gulp build tool",
   "main": "gulpfile.js",
   "dependencies": {
-    "gulp": "^3.9.1"
+    "gulp": "^3.9.1",
+	"gulp-sass": "^3.1.0",
+	"gulp-util": "^3.0.8",
+	"vinyl-ftp": "^0.6.0"
   },
   "devDependencies": {},
   "scripts": {

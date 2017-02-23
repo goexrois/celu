@@ -1,11 +1,21 @@
+'use strict';
 var gulp = require( 'gulp' ); 
 var gutil = require( 'gulp-util' );
 var ftp = require( 'vinyl-ftp' );
-var sass = require( 'sass' ) ;
+var sass = require( 'gulp-sass' ) ;
 
+gulp.task('sass', function () {
+  return gulp.src('./sass/**/*.scss')
+    .pipe(sass().on('error', sass.logError))
+    .pipe(gulp.dest('./css'));
+} );
 
+gulp.task('sass:watch', function () {
+  gulp.watch('./sass/**/*.scss', ['sass']);
+});
+/*
 gulp.task( 'build', function() {
-	gulp.src( [ 'sass/**', 'js/**' ] )
+	return gulp.src( [ 'css/**', 'js/**' ] )
 		.pipe( minify() ) 
 		.pipe( gulp.dest('build') ) ; 
 } );
@@ -32,4 +42,4 @@ gulp.task( 'ftp-deploy', function() {
         .pipe( conn.newer( '/public_html' ) ) // only upload newer files 
         .pipe( conn.dest( '/public_html' ) );
 
-});
+});*/
